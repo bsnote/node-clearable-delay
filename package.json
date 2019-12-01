@@ -1,0 +1,44 @@
+{
+  "name": "clearable-delay",
+  "version": "0.0.1",
+  "description": "Delay a promise a specified amount of time with the ability to clear the delay",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib/**/*"
+  ],
+  "scripts": {
+    "build": "npm run build-ts && npm run tslint",
+    "build-ts": "tsc",
+    "watch-ts": "tsc -w",
+    "tslint": "tslint -c tslint.json -p tsconfig.json",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "prepare": "npm run build-ts",
+    "prepublishOnly": "npm run tslint",
+    "preversion": "npm run tslint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/bsnote/node-clearable-delay.git"
+  },
+  "keywords": [
+    "clear",
+    "delay"
+  ],
+  "author": "Andrei Sedoi <andrei.sedoi@bk.ru>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bsnote/node-clearable-delay/issues"
+  },
+  "homepage": "https://github.com/bsnote/node-clearable-delay",
+  "devDependencies": {
+    "@types/node": "^12.12.14",
+    "prettier": "^1.19.1",
+    "tslint": "^5.20.1",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-plugin-prettier": "^2.0.1",
+    "typescript": "^3.7.2"
+  }
+}
