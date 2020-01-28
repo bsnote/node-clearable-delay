@@ -1,6 +1,6 @@
 {
   "name": "clearable-delay",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Delay a promise a specified amount of time with the ability to clear the delay",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
